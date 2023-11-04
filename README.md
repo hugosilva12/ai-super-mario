@@ -52,7 +52,7 @@ This project is the result of collaborative work. Contributions and improvements
 This project is a collaborative effort by a dedicated team:
 
 - **Hugo Silva** - [hugosilva12](https://github.com/hugosilva12) 
-- **Luís Oliveira**
+- **Luís Oliveira** - [LuisCarlosOliveira](https://github.com/LuisCarlosOliveira)
 - **Sérgio Moreira**
 
 
