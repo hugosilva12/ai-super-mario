@@ -54,7 +54,3 @@ This project is a collaborative effort by a dedicated team:
 - **Hugo Silva** - [hugosilva12](https://github.com/hugosilva12) 
 - **Luís Oliveira** - [LuisCarlosOliveira](https://github.com/LuisCarlosOliveira)
 - **Sérgio Moreira**
-
-
-## Acknowledgments
-Special thanks to the course instructors and assistants for providing guidance and resources to successfully implement this project.
