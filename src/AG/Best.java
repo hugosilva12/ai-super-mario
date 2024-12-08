@@ -2,7 +2,6 @@ package AG;
 
 public class Best {
     private int generation;
-
     private double value;
 
 
@@ -14,7 +13,6 @@ public class Best {
     public int getGeneration() {
         return generation;
     }
-
 
 
     public void setGeneration(int generation) {

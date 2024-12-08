@@ -55,8 +55,8 @@ public class Population {
         System.out.println("type:" + listIndividuals.get(index).getType());
 
         if (listIndividuals.get(index).isFinish()) {
-            System.out.println("Yes, Mario Win : " + listIndividuals.get(index).isFinish());
-            System.out.println("Yes, Mario Score : " + listIndividuals.get(index).getScore());
+            System.out.println("Mario Win : " + listIndividuals.get(index).isFinish());
+            System.out.println("Mario Score : " + listIndividuals.get(index).getScore());
             if (listIndividuals.get(index).getCoins() > 5) {
                 System.out.println("Commands : " + listIndividuals.get(index).getCommands());
             }

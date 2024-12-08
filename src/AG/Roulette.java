@@ -4,11 +4,9 @@ import java.util.*;
 
 
 public class Roulette {
+    private static Map<Individual, Double> elements = new HashMap<>();
 
-
-    private static Map<Individual, Double> elements = new HashMap<Individual, Double>();
-
-    private static List<ElementRandom> elementsByIntervals = new ArrayList<ElementRandom>();
+    private static List<ElementRandom> elementsByIntervals = new ArrayList<>();
 
     private static Double upperMaxLimit;
 
@@ -39,7 +37,7 @@ public class Roulette {
         }
     }
 
-    public void calculePercentage() {
+    public void calculatePercentage() {
         fitnessTotal = 0.d;
         for (Individual individual : getElements().keySet()) {
             fitnessTotal += individual.getFitness();
@@ -67,11 +65,10 @@ public class Roulette {
     }
 
     public Individual getRandomElement() {
-        int randow = new Random().nextInt(100);
-        Double random = randow * 0.01;
-        for (ElementRandom elementRandom : elementsByIntervals) {
-            if (elementRandom.getInferiorLimit() >= random && random < elementRandom.getUpperLimit()) {
-                return elementRandom.getIndividual();
+        double randomValue = new Random().nextDouble();
+        for (ElementRandom element : elementsByIntervals) {
+            if (randomValue >= element.getInferiorLimit() && randomValue < element.getUpperLimit()) {
+                return element.getIndividual();
             }
         }
         return elementsByIntervals.get(0).getIndividual();

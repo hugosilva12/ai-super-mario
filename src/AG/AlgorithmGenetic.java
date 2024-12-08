@@ -24,7 +24,7 @@ public class AlgorithmGenetic {
 
         roulette.cleanRoullete();
         roulette.insertPopulationInRoullete(population.getListIndividuals());
-        roulette.calculePercentage();
+        roulette.calculatePercentage();
         roulette.generateIntervals();
 
         int index = 0;

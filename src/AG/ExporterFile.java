@@ -13,56 +13,34 @@ public class ExporterFile {
 
     public ExporterFile() {
         this.obj = new ObjectMapper();
-
     }
 
     public void exportAvg(String filePath, Object toExport) throws IOException {
-        if (obj == null) {
-            throw new IOException("Object is null");
+        if (toExport == null) {
+            throw new IOException("Object to export is null");
         }
         JsonNode jsonNode = this.obj.valueToTree(toExport);
 
-        FileWriter file = new FileWriter(filePath);
-        ;
-        try {
-
+        try (FileWriter file = new FileWriter(filePath)) {
             file.write(jsonNode.toString());
-
         } catch (IOException e) {
             e.printStackTrace();
-
-        } finally {
-
-            try {
-                file.flush();
-                file.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            throw e;
         }
     }
 
     public void exportBest(String filePath, Object toExport) throws IOException {
-        if (obj == null) {
-            throw new IOException("Object is null");
+        if (toExport == null) {
+            throw new IOException("Object to export is null");
         }
         JsonNode jsonNode = this.obj.valueToTree(toExport);
 
-        FileWriter file = new FileWriter(filePath);
 
-        try {
+        try (FileWriter file = new FileWriter(filePath)) {
             file.write(jsonNode.toString());
         } catch (IOException e) {
             e.printStackTrace();
-
-        } finally {
-
-            try {
-                file.flush();
-                file.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            throw e;
         }
     }
 

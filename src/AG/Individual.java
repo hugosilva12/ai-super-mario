@@ -79,7 +79,6 @@ public class Individual implements Comparable<Individual> {
             } else if (marioStatus.equals("fireball")) {
                 this.fitness += 1000;
             }
-
         }
         if (finish.equals("win")) {
             this.isFinish = true;

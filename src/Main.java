@@ -1,12 +1,5 @@
-
-import AG.Conf;
-import luigi.GameMode;
-import luigi.MarioUtils;
 import luigi.Request;
-import luigi.RunResult;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -17,10 +10,10 @@ public class Main {
         ArrayList<Integer> commands = new ArrayList<Integer>();
 
         for (int i = 0; i < size; i++) {
-            int comando = new Random().nextInt(11);
+            int command = new Random().nextInt(11);
             int length = new Random().nextInt(5) + 5;
             for (int j = 0; j < length; j++) {
-                commands.add(comando);
+                commands.add(command);
                 System.out.print("," + commands.get(commands.size() - 1));
             }
         }
@@ -31,7 +24,7 @@ public class Main {
 
 
         System.out.println(commands);
-        System.out.println("\nSolution lenght: " + commands.size());
+        System.out.println("\nSolution length: " + commands.size());
 
         return new Request(solution, "SuperMarioBros-1-1-v3", "true");
     }

@@ -7,9 +7,9 @@ import java.util.List;
 public class Main {
 
 
-    public static void printGeneration(int generation, Population population, List<AVG> avg_fitness) {
-        System.out.println("Geração " + generation + " | Aptidão: " + population.getIndividual(0).getFitness() + " | Melhor: " + population.getIndividual(0).getFitness()
-                + " | Media: " + avg_fitness.get(generation).getAvg());
+    public static void printGeneration(int generation, Population population, List<AVG> avgFitness) {
+        System.out.println("Generation " + generation + " | Fitness: " + population.getIndividual(0).getFitness() + " | Best: " + population.getIndividual(0).getFitness()
+                + " | Average: " + avgFitness.get(generation).getAvg());
     }
 
 
